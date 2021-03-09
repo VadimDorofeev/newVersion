@@ -89,6 +89,7 @@ nb-configuration.xml
 logs/
 
 ##############################
-## Screenshots
+## Screenshots / Allure
 ##############################
 Screenshots/
+allure-results/
