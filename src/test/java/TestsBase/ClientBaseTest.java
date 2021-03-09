@@ -1,4 +1,4 @@
-package Tests;
+package TestsBase;
 
 import org.testng.annotations.BeforeSuite;
 

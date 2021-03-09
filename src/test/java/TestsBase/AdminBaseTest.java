@@ -1,6 +1,7 @@
-package Tests;
+package TestsBase;
 
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 
 import java.io.IOException;
 
@@ -12,4 +13,6 @@ public class AdminBaseTest extends BaseTest {
     public static void setPropertiesPath() throws IOException {
         getAdminProperties(adminPropertiesPath);
     }
+
+
 }
