@@ -2,12 +2,16 @@ package TestsBase;
 
 import Utils.DriverManager;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
+import static Utils.Utils.takeScreenshot;
 
 public class BaseTest {
 
@@ -39,9 +43,19 @@ public class BaseTest {
         driver.get(url);
     }
 
-    @AfterTest
+/*    @AfterMethod
+    void after(ITestResult result) throws IOException {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            takeScreenshot(driver);
+        }
+        driver.quit();
+        System.out.println("finished");
+    }*/
+
+@AfterTest
     void after() {
         driver.quit();
+        System.out.println("finished");
     }
 
 }
